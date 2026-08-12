@@ -527,11 +527,11 @@ function abrirDetalhesAnimal(
 ) {
 
   const url =
-    `/HTML/Animal.html?lote=${encodeURIComponent(
-      chaveLote
-    )}&id=${encodeURIComponent(
-      firestoreId
-    )}`;
+  `Animal.html?lote=${encodeURIComponent(
+    chaveLote
+  )}&id=${encodeURIComponent(
+    firestoreId
+  )}`;
 
   window.location.href = url;
 }
