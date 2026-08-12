@@ -1,0 +1,386 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*cores
+#051f20
+#0B2B26
+#163832
+#235347
+#8EB69B
+
+*/
+body {
+  background-color: #051f20;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.layout_principal {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+#container_geral {
+  width: 25%;
+  min-width: 320px;
+  height: 100vh;
+  border-right: 2px solid #8eb69b;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.container_listagem_direita {
+  width: 75%;
+  height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+#container_ancora_home {
+  display: flex;
+  justify-content: end;
+}
+
+#container_ancora_home a {
+  padding: 6px 40px;
+  margin: 3px;
+}
+
+.container_listagem_direita a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 4rem;
+  height: 30px;
+  color: #f8e3b4;
+    background-color: transparent;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #072d2e;
+}
+
+.container_listagem_direita a:hover {
+  transition: 0.3s ease;
+  border-bottom: 2px solid #187866;
+}
+
+.lista-bois {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#title {
+  display: flex;
+  justify-content: start;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  color: #c9e6d2;
+}
+
+#title h1 {
+  font-size: 22pt;
+}
+
+.container_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linha_inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.info #peso,
+#obs,
+#num,
+#valor_animal,
+#data_compra,
+#lote {
+  background-color: transparent;
+  color: white;
+  border-radius: 12px;
+  border: 1px solid #8eb69b;
+  padding: 16px;
+  height: 1.8rem;
+  width: 8rem;
+  padding-left: 5px;
+  box-shadow:
+    3px 3px 10px #000000af,
+    -3px -3px 10px #8eb69b30;
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.info input:focus {
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(248, 227, 180, 0.4);
+  border-color: #f8e3b4;
+}
+
+.info input::placeholder {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+}
+
+#container_btn_add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#btn_add_animal {
+  background-color: #071e1b;
+  border: 1px solid #8eb69b;
+  border-radius: 12px;
+  color: #b8cebf;
+  height: 30px;
+  width: 8rem;
+  cursor: pointer;
+  box-shadow:
+    3px 3px 7px #000000a0,
+    -3px -3px 7px rgba(142, 182, 155, 0.15);
+  transition: all 0.3s ease;
+}
+#btn_add_animal:hover {
+  background-color: #8eb69b10;
+}
+
+#btn_add_animal:active {
+  transform: scale(0.95);
+}
+
+.container_calcEfilter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+#info_valor {
+  display: flex;
+  flex-direction: column;
+}
+
+#valor_kg {
+  background-color: transparent;
+  color: #8eb69b;
+  border-radius: 12px;
+  border: 1px solid #8eb69b;
+  height: 1.8rem;
+  margin-bottom: 1rem;
+  margin-left: 7px;
+  width: 14rem;
+  padding: 16px;
+  box-shadow:
+    3px 3px 7px #000000a0,
+    -3px -3px 7px rgba(142, 182, 155, 0.15);
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+#valor_kg:focus {
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(248, 227, 180, 0.4);
+  border-color: #f8e3b4;
+}
+
+#valor_kg::placeholder {
+  color: white;
+}
+
+.botoes-acoes {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+#btn_calcular,
+.salvar-contagem button {
+  background-color: #071e1b;
+  width: 7rem;
+  border: 1px solid #8eb69b;
+  border-radius: 12px;
+  color: #fff;
+  height: 27px;
+  cursor: pointer;
+  box-shadow:
+    3px 3px 7px #000000a0,
+    -3px -3px 7px rgba(142, 182, 155, 0.15);
+  transition:
+    background-color 0.3s ease,
+    transform 0.1s ease;
+  font-size: 10pt;
+}
+
+#btn_calcular:hover,
+.salvar-contagem button:hover {
+  background-color: #8eb69b10;
+}
+
+#btn_calcular:active,
+.salvar-contagem button:active {
+  transform: scale(0.95);
+}
+
+/* =======================================================
+   ESTILOS DOS CARDS DOS ANIMAIS 
+   ======================================================= */
+
+.card-animal {
+  padding: 15px;
+  border-radius: 22px;
+  /* Fundo sólido escuro para o card "tapar" o fundo e destacar o 3D */
+  background: linear-gradient(167deg, #061a17, #071e1b, #072d2e);
+  width: 100%;
+  box-shadow:
+    -6px -6px 10px #000000a0,
+    6px 6px 6px #8eb69b15;
+  border: 1px solid #163832;
+  transition: 0.4s ease;
+}
+
+.card-animal:hover {
+  transition: 0.5s ease;
+  border: 1px solid #187866;
+  box-shadow:
+    -8px -8px 10px #000000cf,
+    8px 8px 6px #8eb69b29;
+}
+
+/* Restante das classes do card se mantém iguais */
+.card-numero {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.card-info {
+  font-size: 0.9em;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.card-obs {
+  color: #ccc;
+  font-size: 0.85em;
+  margin-bottom: 10px;
+}
+
+.btn-remover {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #8eb69b;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  position: relative; /* Garante que o botão fique clicável */
+  z-index: 2;
+  box-shadow:
+    2px 2px 10px #000000a0,
+    -4px -4px 30px #8eb69b26;
+}
+
+.btn-remover:hover {
+  background-color: #8eb69b21;
+}
+
+/* Chrome, Edge, Opera e Safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+h3 {
+  color: #187866;
+}
+
+p {
+  color: #187866;
+}
+
+/* =======================================================
+   RESPONSIVIDADE (Celulares e Tablets)
+   ======================================================= */
+@media (max-width: 576px) {
+  /* Libera a rolagem do body para que a página inteira possa rolar no celular */
+  body {
+    overflow-y: auto;
+  }
+
+  /* Muda a estrutura de lado a lado para empilhada (coluna) */
+  .layout_principal {
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* Faz o formulário ocupar 100% da largura da tela */
+  #container_geral {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    border-right: none; /* Remove a linha divisória lateral */
+    border-bottom: 2px solid #8eb69b; /* Adiciona a divisória na parte de baixo */
+    padding-bottom: 30px;
+  }
+
+  /* Faz a lista de animais ocupar 100% da largura da tela logo abaixo do formulário */
+  .container_listagem_direita {
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  /* Centraliza os botões de navegação (Home, Histórico, Animais) */
+  #container_ancora_home {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Centraliza o título e a área de cálculo de valor no mobile */
+  #title, .container_calcEfilter {
+    margin-left: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #title h1 {
+    text-align: center;
+  }
+
+  h3{
+    margin-top: 10px;
+  }
+}

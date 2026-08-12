@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden; /* Ele deve ficar apenas aqui no body */
+  background-color: #051f20;
+}
+
+.container-animais-vendidos{
+  padding-left: 20px;
+}
+
+.card-vendido {
+  /* Glassmorphism ligeiramente mais escurecido para o histórico */
+  background-color: rgba(5, 31, 32, 0.6) !important;
+
+  box-shadow:
+    8px 8px 16px rgba(0, 0, 0, 0.6),
+    -4px -4px 12px rgba(142, 182, 155, 0.02) !important;
+  width: 280px !important;
+  transition: all 0.4s ease;
+  margin: 0px 10px;
+}
+
+.card-vendido:hover {
+  box-shadow:
+    10px 10px 20px rgba(0, 0, 0, 0.8),
+    -4px -4px 15px rgba(142, 182, 155, 0.05) !important;
+  border-color: rgba(142, 182, 155, 0.3) !important;
+}
+
+.linha-divisoria {
+  border: 0;
+  border-top: 1px solid #163832;
+  margin: 10px 0;
+}
+
+.link-voltar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: #8eb69b;
+  text-decoration: none;
+
+  border: 1px solid #8eb69b;
+  border-radius: 20px;
+
+  transition: 0.25s;
+}
+
+.link-voltar:hover {
+  background-color: #1638327f;
+  color: white;
+}
+
+/* =======================================================
+   ESTILOS DO ACORDEÃO (HISTÓRICO COMPLETO)
+   ======================================================= */
+
+.detalhes-historico {
+  margin-top: 15px;
+  background-color: #0b2b26;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #163832;
+}
+
+.detalhes-historico summary {
+  padding: 10px 12px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #8eb69b;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.detalhes-historico summary:hover {
+  background-color: rgba(142, 182, 155, 0.1);
+}
+
+.detalhes-historico summary::marker {
+  color: #8eb69b;
+}
+
+/* O conteúdo que aparece ao clicar */
+.historico-conteudo {
+  padding: 12px;
+  font-size: 0.85em;
+  color: #b8cebf;
+  border-top: 1px solid #163832;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.historico-conteudo h4 {
+  color: #c9e6d2;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1em;
+  border-bottom: 1px dashed #163832;
+  padding-bottom: 3px;
+}
+
+.historico-conteudo h4:first-child {
+  margin-top: 0;
+}
+
+.historico-conteudo ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.historico-conteudo li {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.historico-conteudo p {
+  margin-top: 0;
+  line-height: 1.4;
+  font-style: italic;
+  color: #8eb69b;
+  opacity: 0.8;
+}
+
+@media (max-width: 576px) {
+  .layout_animais {
+    padding: 20px;
+  }
+
+  .lista-bois {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-vendido {
+    width: 400px !important;
+  }
+}

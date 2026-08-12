@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Fazenda-Redenção - Contagem</title>
+    <link rel="stylesheet" href="/CSS/Contagem.css" />
+    <script type="module" src="/JS/script_Contagem.js" defer></script>
+  </head>
+  <body>
+    <main class="layout_principal">
+      <div id="container_geral">
+        <div id="title">
+          <h1>Contagem de gado</h1>
+        </div>
+
+        <div class="container_info">
+          <div class="info">
+            <div class="linha_inputs">
+              <input
+                type="number"
+                name="peso"
+                id="peso"
+                min="0"
+                autocomplete="off"
+                placeholder="Peso inicial"
+              />
+              <input
+                type="text"
+                id="num"
+                name="num"
+                placeholder="Número"
+                autocomplete="off"
+                oninput="this.value = this.value.toUpperCase()"
+                min="0"
+              />
+            </div>
+
+            <div class="linha_inputs">
+              <input
+                type="text"
+                id="obs"
+                name="obs"
+                placeholder="Observação"
+                autocomplete="off"
+              />
+              <input
+                type="number"
+                id="valor_animal"
+                placeholder="Valor de compra"
+                min="0"
+              />
+            </div>
+
+            <div class="linha_inputs">
+              <input type="date" id="data_compra" />
+              <input type="number" id="lote" placeholder="Lote" min="0" />
+            </div>
+
+            <div id="container_btn_add">
+              <input
+                id="btn_add_animal"
+                type="button"
+                value="Adicionar"
+                onclick="Adicionar_animal()"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="container_calcEfilter">
+          <div id="info_valor">
+            <input
+              type="number"
+              id="valor_kg"
+              placeholder="Preço por Kg (R$)"
+            />
+
+            <div class="botoes-acoes">
+              <button id="btn_calcular" onclick="CalculoValorTotal()">
+                Calcular
+              </button>
+              <div class="salvar-contagem">
+                <button onclick="salvarContagem()">Salvar</button>
+              </div>
+            </div>
+
+            <div class="valor_total_receber"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container_listagem_direita">
+        <div id="container_ancora_home">
+          <a href="/html/Index.html">Home</a>
+          <a href="/html/Vendidos.html">Histórico</a>
+          <a href="/html/Animais.html">Animais</a>
+        </div>
+        <div class="total_bois"></div>
+        <div class="peso_tot"></div>
+        <div class="lista-bois"></div>
+      </div>
+    </main>
+  </body>
+</html>

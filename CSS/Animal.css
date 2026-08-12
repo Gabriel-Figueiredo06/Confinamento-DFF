@@ -1,0 +1,402 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #051f20;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.layout_animal {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 40px 60px;
+}
+
+#title-animal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#title-animal h1 {
+  font-size: 22pt;
+  color: #c9e6d2;
+}
+
+.link-voltar {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  color: #8eb69b;
+  text-decoration: none;
+  border: 1px solid #8eb69b;
+  border-radius: 120px;
+  padding: 6px 14px;
+  font-size: 10pt;
+  background-color: #071e1b;
+  box-shadow:
+    3px 3px 7px #000000a0,
+    -3px -3px 7px rgba(142, 182, 155, 0.15);
+  transition: all 0.3s ease;
+}
+
+.link-voltar:hover {
+  background-color: #8eb69b10;
+}
+
+.link-voltar:active {
+  transform: scale(0.95);
+}
+
+.erro {
+  color: #d68787;
+  font-style: italic;
+}
+
+/* =======================================================
+   LAYOUT GERAL: ficha à esquerda, seções extras à direita
+   ======================================================= */
+
+.detalhe-container {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) minmax(280px, 1fr);
+  align-items: start;
+  gap: 20px;
+  max-width: 1600px;
+}
+
+.ficha-animal {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+#secao-remedios {
+  grid-column: 2;
+  grid-row: 1;
+}
+#secao-gastos {
+  grid-column: 2;
+  grid-row: 2;
+}
+#secao-pesos {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+@media (max-width: 900px) {
+  .detalhe-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .ficha-animal {
+    grid-row: auto;
+  }
+}
+
+/* =======================================================
+   FICHA DO ANIMAL E SEÇÕES EXTRAS (GLASSMORPHISM)
+   ======================================================= */
+
+.ficha-animal,
+.secao-extra {
+  width: 100%;
+  padding: 25px 30px;
+  margin-bottom: 0;
+
+  background-color: rgba(11, 43, 38, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 22px;
+  border: 1px solid rgba(142, 182, 155, 0.2);
+  border-top: 1px solid rgba(142, 182, 155, 0.4);
+  border-left: 1px solid rgba(142, 182, 155, 0.4);
+  box-shadow:
+    8px 8px 16px rgba(0, 0, 0, 0.5),
+    -4px -4px 12px rgba(142, 182, 155, 0.05);
+}
+
+.ficha-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #163832;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.ficha-header h2 {
+  font-size: 20pt;
+  color: #fff;
+}
+
+.ficha-lote {
+  background-color: transparent;
+  border: 1px solid #8eb69b;
+  color: #8eb69b;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 10pt;
+}
+
+.ficha-dados {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dado {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dado-label {
+  font-size: 0.8em;
+  color: #8eb69b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dado-valor {
+  font-size: 1.05em;
+  color: #fff;
+}
+
+.dado-obs .dado-valor {
+  color: #c9e6d2;
+}
+
+.secao-extra h3 {
+  font-size: 13pt;
+  color: #8eb69b;
+  margin-bottom: 15px;
+}
+
+#sold-btn {
+  background-color: #071e1b;
+  height: 35px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: 1px solid #8eb69b;
+  color: #fff;
+  cursor: pointer;
+  box-shadow:
+    3px 3px 7px #000000a0,
+    -3px -3px 7px rgba(142, 182, 155, 0.15);
+  transition: all 0.3s ease;
+}
+
+#sold-btn:hover {
+  background-color: #8eb69b10;
+}
+
+#sold-btn:active {
+  transform: scale(0.95);
+}
+
+/* =======================================================
+   FORMULÁRIOS E LISTAS (NEUMORPHISM)
+   ======================================================= */
+
+.form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.form-inline input {
+  background-color: transparent;
+  color: white;
+  border-radius: 12px;
+  border: 1px solid #8eb69b;
+  height: 1.9rem;
+  padding-left: 10px;
+  flex: 1 1 160px;
+  box-shadow:
+    3px 3px 10px #000000af,
+    -3px -3px 10px #8eb69b30;
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.form-inline input:focus {
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(142, 182, 155, 0.4);
+  border-color: #c9e6d2;
+}
+
+.form-inline input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+}
+
+.form-inline button {
+  background-color: #071e1b;
+  border: 1px solid #8eb69b;
+  border-radius: 12px;
+  color: #b8cebf;
+  height: 1.9rem;
+  padding: 0 16px;
+  cursor: pointer;
+  font-size: 10pt;
+  box-shadow:
+    3px 3px 7px #000000a0,
+    -3px -3px 7px rgba(142, 182, 155, 0.15);
+  transition: all 0.3s ease;
+}
+
+.form-inline button:hover {
+  background-color: #8eb69b10;
+}
+
+.form-inline button:active {
+  transform: scale(0.95);
+}
+
+.lista-itens {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lista-vazia {
+  color: #8eb69b;
+  font-size: 0.85em;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.item-linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #0b2b26;
+  border: 1px solid #163832;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 0.9em;
+}
+
+.item-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.item-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #8eb69b;
+}
+
+.item-concluido span {
+  color: #8eb69b;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.btn-remover-item {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #8c3b3b;
+  color: #d68787;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 12pt;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-remover-item:hover {
+  background-color: rgba(140, 59, 59, 0.15);
+}
+
+.total-gastos {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #163832;
+  font-size: 0.95em;
+  color: #8eb69b;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+@media (max-width: 576px) {
+  .layout_animal {
+    padding: 20px;
+  }
+
+  .link-voltar {
+    position: absolute;
+    top: 70px;
+  }
+
+  .ficha-animal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .ficha-dados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .secao-extra {
+    height: 12rem;
+  }
+  /* 
+
+
+  #data-compra-label,
+  #data-compra {
+    margin-left: 40px;
+  }
+
+  #secao-remedios.secao-extra{
+    width: 50%;
+    padding: 15px;
+  }
+
+    #secao-remedios.secao-extra input{
+      width: 10px;
+    }
+
+    #secao-remedios h3{
+      font-size: 11pt;
+    }
+
+    #lista-remedios.lista-itens{
+      font-size: 10pt;
+    } */
+}
