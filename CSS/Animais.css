@@ -26,6 +26,11 @@ body {
   gap: 10px;
 }
 
+#title-animais h1{
+  margin-left: 5rem;
+  display: none;
+}
+
 #title-animais h1 {
   font-size: 22pt;
   color: #c9e6d2;
@@ -164,6 +169,15 @@ body {
   box-shadow:
     8px 8px 16px rgba(0, 0, 0, 0.5),
     -4px -4px 12px rgba(142, 182, 155, 0.05);
+
+  /* 1. Remove o "piscar" azul ao tocar na tela no mobile */
+  -webkit-tap-highlight-color: transparent;
+
+  /* 2. Impede que o texto seja selecionado (fique azul) no duplo clique */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .card-animal:hover {
@@ -230,7 +244,7 @@ body {
     width: 100%;
   }
 
-  .layout_animais{
+  .layout_animais {
     padding: 20px;
   }
 }

@@ -366,7 +366,7 @@ function renderizarFichaAnimal(container, animal, lote) {
         >
 
             <h3>
-                Remédios / Vacinas
+                Medicações
             </h3>
 
 
@@ -376,10 +376,13 @@ function renderizarFichaAnimal(container, animal, lote) {
             >
 
                 <input
-                    type="date"
-                    id="input-data-remedio"
-                    required
-                />
+    type="text"
+    id="input-data-remedio"
+    placeholder="Data"
+    onfocus="this.type='date'"
+    onblur="this.value == '' ? this.type='text' : this.type='date'"
+    required
+/>
 
 
                 <input

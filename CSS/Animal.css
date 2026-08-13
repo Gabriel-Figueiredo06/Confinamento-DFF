@@ -88,6 +88,7 @@ body {
 #secao-pesos {
   grid-column: 2;
   grid-row: 3;
+  height: auto;
 }
 
 @media (max-width: 900px) {
@@ -353,9 +354,11 @@ input[type="number"] {
     padding: 20px;
   }
 
-  .link-voltar {
-    position: absolute;
-    top: 70px;
+  .container-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -30px;
   }
 
   .ficha-animal {

@@ -1,56 +1,36 @@
 <!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-  <meta charset="UTF-8" />
+    <title>Fazenda-Redenção - Animais</title>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-  />
+    <link rel="stylesheet" href="../CSS/Animais.css" />
 
-  <title>Fazenda-Redenção - Animais</title>
+    <script type="module" src="../JS/script_Animais.js" defer></script>
+  </head>
 
-  <link
-    rel="stylesheet"
-    href="../CSS/Animais.css"
-  />
+  <body>
+    <main class="layout_animais">
+      <header id="title-animais">
+        <h1>Meus animais</h1>
 
-  <script
-    type="module"
-    src="../JS/script_Animais.js"
-    defer>
-  </script>
+        <a href="./Contagem.html" class="link-voltar"> Contagem </a>
+        <a href="./Vendidos.html" class="link-voltar">Histórico</a>
+      </header>
 
-</head>
+      <div class="cont-resumo-geral">
+        <div class="resumo-geral"></div>
+      </div>
 
-<body>
-
-  <main class="layout_animais">
-
-    <header id="title-animais">
-
-      <h1>Animais por Lote</h1>
-
-      <a
-        href="./Contagem.html"
-        class="link-voltar"
-      >
-        ← Voltar para Contagem
-      </a>
-
-    </header>
-
-    <div class="cont-resumo-geral">
-      <div class="resumo-geral"></div>
-    </div>
-
-    <div class="lotes-container">
-      <!-- Os lotes são renderizados aqui dinamicamente pelo script_Animais.js -->
-    </div>
-
-  </main>
-
-</body>
+      <div class="lotes-container">
+        <!-- Os lotes são renderizados aqui dinamicamente pelo script_Animais.js -->
+      </div>
+    </main>
+  </body>
 </html>

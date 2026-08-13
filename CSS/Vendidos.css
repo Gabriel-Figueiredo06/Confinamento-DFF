@@ -143,4 +143,10 @@ body {
   .card-vendido {
     width: 400px !important;
   }
+
+  .container-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }

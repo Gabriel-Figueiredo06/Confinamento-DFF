@@ -62,7 +62,7 @@ body {
   width: 4rem;
   height: 30px;
   color: #f8e3b4;
-    background-color: transparent;
+  background-color: transparent;
   margin-bottom: 10px;
   border-bottom: 2px solid #072d2e;
 }
@@ -331,9 +331,7 @@ p {
   color: #187866;
 }
 
-/* =======================================================
-   RESPONSIVIDADE (Celulares e Tablets)
-   ======================================================= */
+/*RESPONSIVIDADE (Celulares) */
 @media (max-width: 576px) {
   /* Libera a rolagem do body para que a página inteira possa rolar no celular */
   body {
@@ -344,6 +342,50 @@ p {
   .layout_principal {
     flex-direction: column;
     height: auto;
+  }
+
+  .info #peso,
+  #num,
+  #obs,
+  #valor_animal,
+  #lote,
+  #data_compra {
+    width: 11rem;
+    height: 40px;
+  }
+
+  #btn_add_animal {
+    width: 100%;
+    height: 35px;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  #valor_kg {
+    width: 100%;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  /* Usando exatamente a mesma força do código original */
+  #btn_calcular,
+  .salvar-contagem button {
+    height: 35px;
+    width: 8rem;
+
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .botoes-acoes {
+    width: 100%;
+    margin-left: 28px;
   }
 
   /* Faz o formulário ocupar 100% da largura da tela */
@@ -370,7 +412,8 @@ p {
   }
 
   /* Centraliza o título e a área de cálculo de valor no mobile */
-  #title, .container_calcEfilter {
+  #title,
+  .container_calcEfilter {
     margin-left: 0;
     justify-content: center;
     align-items: center;
@@ -380,7 +423,51 @@ p {
     text-align: center;
   }
 
-  h3{
+  h3 {
     margin-top: 10px;
+  }
+
+  .valor_total_receber:empty {
+    display: none;
+  }
+
+  .valor_total_receber {
+    width: 18rem;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffd;
+    height: 60px;
+    background-color: transparent;
+    border: 1px solid #8eb69b;
+    box-shadow:
+      3px 3px 7px #000000a0,
+      -3px -3px 7px rgba(142, 182, 155, 0.15);
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    padding: 40px;
+  }
+
+  .container-informacoes {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(207deg, #051614, #051412, #052122);
+    border: 1px solid #8eb69b;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow:
+      -6px -6px 10px #000000a0,
+      6px 6px 6px #8eb69b15;
+    border: 1px solid #163832;
+    transition: 0.4s ease;
+  }
+
+  .total_bois {
+    margin-top: -10px;
   }
 }
