@@ -1,7 +1,23 @@
+@font-face {
+  font-family: "Caviar";
+  src: url("../FONTS/CaviarDreams.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alata";
+  src: url("../FONTS/Alata-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* Aplica a Caviar como padrão em tudo */
+  font-family: "Caviar", Arial, Helvetica, sans-serif;
 }
 
 /*cores
@@ -14,7 +30,7 @@
 */
 body {
   background-color: #051f20;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Caviar", Arial, Helvetica, sans-serif;
   overflow: hidden;
 }
 
@@ -55,6 +71,7 @@ body {
 }
 
 .container_listagem_direita a {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata na Navegação */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +87,12 @@ body {
 .container_listagem_direita a:hover {
   transition: 0.3s ease;
   border-bottom: 2px solid #187866;
+}
+
+/* Fonte Alata nas infos de totais */
+.total_bois,
+.peso_tot {
+  font-family: "Alata", Arial, Helvetica, sans-serif;
 }
 
 .lista-bois {
@@ -139,7 +162,7 @@ body {
 
 .info input::placeholder {
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Caviar", Arial, Helvetica, sans-serif;
   font-size: 0.85rem;
 }
 
@@ -151,6 +174,7 @@ body {
 }
 
 #btn_add_animal {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata no Botão */
   background-color: #071e1b;
   border: 1px solid #8eb69b;
   border-radius: 12px;
@@ -221,6 +245,7 @@ body {
 
 #btn_calcular,
 .salvar-contagem button {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata nos Botões */
   background-color: #071e1b;
   width: 7rem;
   border: 1px solid #8eb69b;
@@ -274,12 +299,14 @@ body {
 
 /* Restante das classes do card se mantém iguais */
 .card-numero {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata */
   font-size: 1.1em;
   margin-bottom: 5px;
   color: #fff;
 }
 
 .card-info {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata */
   font-size: 0.9em;
   margin-bottom: 8px;
   color: #fff;
@@ -292,6 +319,7 @@ body {
 }
 
 .btn-remover {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata no Botão */
   cursor: pointer;
   background-color: transparent;
   border: 1px solid #8eb69b;

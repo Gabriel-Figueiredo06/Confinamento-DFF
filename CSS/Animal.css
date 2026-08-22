@@ -1,12 +1,28 @@
+@font-face {
+  font-family: "Caviar";
+  src: url("../FONTS/CaviarDreams.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alata";
+  src: url("../FONTS/Alata-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* Aplica a Caviar como padrão em tudo */
+  font-family: "Caviar", Arial, Helvetica, sans-serif;
 }
 
 body {
   background-color: #051f20;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Caviar", Arial, Helvetica, sans-serif;
   color: #fff;
 }
 
@@ -31,6 +47,7 @@ body {
 }
 
 .link-voltar {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata na Navegação */
   height: 30px;
   display: flex;
   align-items: center;
@@ -133,11 +150,13 @@ body {
 }
 
 .ficha-header h2 {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata no Número */
   font-size: 20pt;
   color: #fff;
 }
 
 .ficha-lote {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata no Lote */
   background-color: transparent;
   border: 1px solid #8eb69b;
   color: #8eb69b;
@@ -166,6 +185,7 @@ body {
 }
 
 .dado-valor {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata nos Dados de Peso/Valor */
   font-size: 1.05em;
   color: #fff;
 }
@@ -181,6 +201,7 @@ body {
 }
 
 #sold-btn {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata no Botão Vender */
   background-color: #071e1b;
   height: 35px;
   width: 100%;
@@ -237,11 +258,13 @@ body {
 }
 
 .form-inline input::placeholder {
+  font-family: "Caviar", Arial, Helvetica, sans-serif;
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.85rem;
 }
 
 .form-inline button {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata nos Botões Formulário */
   background-color: #071e1b;
   border: 1px solid #8eb69b;
   border-radius: 12px;
@@ -310,6 +333,7 @@ body {
 }
 
 .btn-remover-item {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata no Botão Remover Item (X) */
   cursor: pointer;
   background-color: transparent;
   border: 1px solid #8c3b3b;
@@ -332,6 +356,7 @@ body {
 }
 
 .total-gastos {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata no Total */
   margin-top: 12px;
   padding-top: 12px;
   border-top: 1px dashed #163832;
@@ -354,7 +379,7 @@ input[type="number"] {
     padding: 20px;
   }
 
-  .container-links{
+  .container-links {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -378,28 +403,4 @@ input[type="number"] {
   .secao-extra {
     height: auto;
   }
-  /* 
-
-
-  #data-compra-label,
-  #data-compra {
-    margin-left: 40px;
-  }
-
-  #secao-remedios.secao-extra{
-    width: 50%;
-    padding: 15px;
-  }
-
-    #secao-remedios.secao-extra input{
-      width: 10px;
-    }
-
-    #secao-remedios h3{
-      font-size: 11pt;
-    }
-
-    #lista-remedios.lista-itens{
-      font-size: 10pt;
-    } */
 }

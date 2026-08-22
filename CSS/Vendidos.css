@@ -1,15 +1,33 @@
+@font-face {
+  font-family: "Caviar";
+  src: url("../FONTS/CaviarDreams.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alata";
+  src: url("../FONTS/Alata-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* Aplica a fonte em TODOS os elementos por padrão */
+  font-family: "Caviar", Arial, Helvetica, sans-serif;
 }
 
 body {
   overflow-x: hidden; /* Ele deve ficar apenas aqui no body */
   background-color: #051f20;
+  /* Reforça a fonte no corpo do site */
+  font-family: "Caviar", Arial, Helvetica, sans-serif;
 }
 
-.container-animais-vendidos{
+.container-animais-vendidos {
   padding-left: 20px;
 }
 
@@ -39,6 +57,7 @@ body {
 }
 
 .link-voltar {
+  font-family: "Alata", Arial, Helvetica, sans-serif; /* Fonte Alata aplicada nos botões de navegação */
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -144,7 +163,7 @@ body {
     width: 400px !important;
   }
 
-  .container-links{
+  .container-links {
     width: 100%;
     display: flex;
     justify-content: space-between;
